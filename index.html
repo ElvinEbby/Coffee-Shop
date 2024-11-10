@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 5 - Starbucks drinks</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <sp-theme scale="medium" color="light">
+        <main>
+            <section id="charts">
+                <h4>Starbucks beverage calories</h4>
+
+                <div class="input-grid">
+                    <svg width="600" height="720">
+                        <!-- Here goes your chart -->
+                    </svg>
+                </div>
+            </section>
+
+            <section id="panel">
+                <h4>Size</h4>
+                <div class="input-grid">
+                    <fieldset id="size-fieldset">
+                        <!-- input options will be created from main.js -->
+                    </fieldset>
+                </div>
+
+
+                <h4>Milk type</h4>
+                <div class="input-grid">
+                    <fieldset id="milk-fieldset">
+                        <!-- input options will be created from main.js -->
+                    </fieldset>
+                </div>
+
+                <h4 class="numeric-input-section-title">Calories filter<span id="range-result">MIN - MAX</span></h4>
+                <div class="input-grid numeric-range-input">
+                    <sp-slider id="numeric-range" variant="range" step="1" min="0" max="510" label-visibility="none">
+                        <sp-slider-handle id="slider-handle-min" slot="handle" name="min" label="Minimum" value="0"></sp-slider-handle>
+                        <sp-slider-handle id="slider-handle-max" slot="handle" name="max" label="Maximum" value="510"></sp-slider-handle>
+                    </sp-slider>
+                </div>
+            </section>
+        </main>
+    </sp-theme>
+</body>
+
+<script src="./main.js" type="module"></script>
+
+</html>
